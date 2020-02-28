@@ -23,7 +23,7 @@ export default () => (
   <Container>
     <Image src={img} alt="" />
     <p>
-      Everything you ever wanted to know about your favorite Lord Of The Ring characters and, um, cats?
+      Everything you ever wanted to know about your favorite Lord Of The Rings characters and, um, cats?
     </p>
   </Container>
 );

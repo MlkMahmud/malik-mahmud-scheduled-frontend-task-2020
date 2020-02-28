@@ -34,6 +34,7 @@ module.exports = {
       filename: 'index.html',
       template: path.join(__dirname, 'public', 'index.html'),
       minify: true,
+      favicon: path.join(__dirname, 'public', 'images', 'favicon.ico'),
     }),
   ],
 };
