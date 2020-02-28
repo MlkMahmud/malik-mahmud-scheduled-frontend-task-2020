@@ -7,7 +7,7 @@ import GlobalStyle from './GlobalStyle';
 import Header from './Header';
 import Main from './Main';
 
-const Home = lazy(() => import('./Home'));
+const Home = lazy(() => import('../pages/home'));
 
 
 const App = () => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import img from '../../../public/images/gandalf-cat.jpg';
+import img from '../../public/images/gandalf-cat.jpg';
 
 
 const Container = styled.div`
