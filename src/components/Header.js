@@ -7,11 +7,13 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 2.5vmin;
+  height: 60px;
   background: ghostwhite;
   box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, .4);
   
   @media screen and (max-width:380px) {
     flex-direction: column;
+    height: 100px;
   }
 `;
 
@@ -23,7 +25,7 @@ const Logo = styled(Link)`
   padding: 10px 20px; 
 
   @media screen and (max-width:380px) {
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
 `;
 
@@ -49,7 +51,7 @@ export default () => (
         to="/lotr"
         aria-label="the lord of the rings"
       >
-        lotrs
+        lotr
       </NavLink>
     </nav>
   </Header>

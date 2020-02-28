@@ -15,6 +15,17 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpe?g|gif|webp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'static/images',
+            },
+          },
+        ],
+      },
     ],
   },
 
