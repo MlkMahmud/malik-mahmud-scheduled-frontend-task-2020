@@ -8,6 +8,7 @@ import Header from './Header';
 import Main from './Main';
 
 const Home = lazy(() => import('../pages/home'));
+const Characters = lazy(() => import('../pages/characters'));
 
 
 const App = () => (
@@ -18,6 +19,7 @@ const App = () => (
       <Main>
         <Suspense fallback={null}>
           <Route path="/" exact component={Home} />
+          <Route path="/lotr" component={Characters} />
         </Suspense>
       </Main>
     </Router>

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 
 module.exports = {
@@ -36,5 +37,6 @@ module.exports = {
       minify: true,
       favicon: path.join(__dirname, 'public', 'images', 'favicon.ico'),
     }),
+    new Dotenv(),
   ],
 };
