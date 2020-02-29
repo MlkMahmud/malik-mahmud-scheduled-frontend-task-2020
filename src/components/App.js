@@ -6,6 +6,7 @@ import store from '../store'
 import GlobalStyle from './GlobalStyle';
 import Header from './Header';
 import Main from './Main';
+import Spinner from './Spinner';
 
 const Home = lazy(() => import('../pages/home'));
 const Characters = lazy(() => import('../pages/characters'));
@@ -17,7 +18,7 @@ const App = () => (
       <GlobalStyle />
       <Header />
       <Main>
-        <Suspense fallback={null}>
+        <Suspense fallback={<Spinner />}>
           <Route path="/" exact component={Home} />
           <Route path="/lotr" component={Characters} />
         </Suspense>
