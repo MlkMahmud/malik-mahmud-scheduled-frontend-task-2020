@@ -2,15 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import Card from './Card';
+import CardText from './CardText';
 
-const Card = styled.div`
-  background-color: #f8f8ff;
-  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.4);
-  padding: 20px;
 
-  a {
-    color: #000;
-  }
+const Wrapper = styled.div`
+  padding: 0 20px;
 `;
 
 
@@ -20,35 +17,37 @@ const CharacterCard = ({ character }) => {
   } = character;
   return (
     <Card>
-      <p>
-        <b>Name:</b>
-        {name}
-      </p>
-      <p>
-        <b>Race: </b>
-        {race}
-      </p>
-      <p>
-        <b>Birth: </b>
-        {birth}
-      </p>
-      <p>
-        <b>Realm: </b>
-        {realm}
-      </p>
-      <p>
-        <b>Death: </b>
-        {death}
-      </p>
-      <p>
-        <a
-          href={wikiUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          More...
-        </a>
-      </p>
+      <Wrapper>
+        <CardText
+          field="Name"
+          value={name}
+        />
+        <CardText
+          field="Race"
+          value={race}
+        />
+        <CardText
+          field="Birth"
+          value={birth}
+        />
+        <CardText
+          field="Realm"
+          value={realm}
+        />
+        <CardText
+          field="Death"
+          value={death}
+        />
+        <p>
+          <a
+            href={wikiUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            More...
+          </a>
+        </p>
+      </Wrapper>
     </Card>
   );
 };
