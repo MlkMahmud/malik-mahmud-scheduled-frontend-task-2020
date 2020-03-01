@@ -17,7 +17,10 @@ CardText.defaultProps = {
 
 CardText.propTypes = {
   field: PropTypes.string.isRequired,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
 };
 
 

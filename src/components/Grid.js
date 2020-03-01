@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
 `;
 
@@ -18,7 +18,9 @@ const Grid = ({ children }) => (
 
 
 Grid.propTypes = {
-  children: PropTypes.arrayOf().isRequired,
+  children: PropTypes.arrayOf(
+    PropTypes.node.isRequired,
+  ).isRequired,
 };
 
 

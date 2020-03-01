@@ -1,7 +1,9 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-await-in-loop */
 const fetchCats = async (index) => {
-  const response = await fetch(`https://api.thecatapi.com/v1/breeds?limit=4&page=${index}`);
+  const response = await fetch(`https://api.thecatapi.com/v1/breeds?limit=5&page=${index}`, {
+    headers: { 'x-api-key': process.env.API_KEY },
+  });
 
   if (response.ok) {
     return response.json();
@@ -15,7 +17,9 @@ const fetchCatImages = async (cats = []) => {
 
   for (let i = 0; i < len; i += 1) {
     const { id } = cats[i];
-    const response = await fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${id}`);
+    const response = await fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${id}`, {
+      headers: { 'x-api-key': process.env.API_KEY },
+    });
     const [cat] = await response.json();
     const {
       name, life_span, dog_friendly, child_friendly, shedding_level, temperament,
